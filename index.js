@@ -50,7 +50,6 @@ $(".row").each(function () {
 
     let hour = Number(id);
     const timeSlot = $(row.find(".time-slot")[0]);
-
     if (hour === currentHour) {
         timeSlot.addClass("present");
     } else if (hour < currentHour) {
@@ -60,6 +59,7 @@ $(".row").each(function () {
     }
 });
 
+// this saves is a click event which saves the input of the textarea and saves the day the id and the input to local storage 
 $("button.saveBtn").on("click", function (event) {
     const button = $(this);
     const row = button.closest(".row");
