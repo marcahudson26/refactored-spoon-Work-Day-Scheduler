@@ -28,7 +28,7 @@ function addRow(id, text) {
             .attr("row", "2")
             .attr("cols", "50"),
         // confirm
-        $("<button>").addClass("col-2 saveBtn").text("Confirm")
+        $("<button>").addClass("col-2 saveBtn").text("save")
     );
     // add new row to container
     $(".container").append(row);
