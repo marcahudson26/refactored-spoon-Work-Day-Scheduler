@@ -1,2 +1,3 @@
-const gradDate = moment("03/17/23");
+const gradDate = moment();
 $("#currentDay").text(gradDate.format("dddd, D MMM YYYY"));
+
