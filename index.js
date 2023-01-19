@@ -12,7 +12,8 @@ $(".row").each(function () {
     const row = $(this);
     const id = row.data("id");
 
-
+    const value = localStorage.getItem(`${today}-${id}`);
+    row.find("textarea")[0].value = value
 
     let hour = Number(id);
     const timeSlot = $(row.find(".time-slot")[0]);
@@ -26,3 +27,11 @@ $(".row").each(function () {
     }
 });
 
+$(".saveBtn button.btn").on("click", function (event) {
+    const button = $(this);
+    const row = button.closest(".row");
+    const id = row.data("id");
+
+    let textInput = row.find("textarea")[0].value
+    localStorage.setItem(`${today}-${id}`, textInput);
+});
